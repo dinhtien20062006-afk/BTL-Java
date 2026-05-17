@@ -8,7 +8,6 @@ public class OCRService {
     public String extractTextFromImage(String imagePath) {
         Tesseract tesseract = new Tesseract();
         try {
-            // Bạn cần tải dữ liệu ngôn ngữ (vie.traineddata) đặt vào thư mục tessdata
             tesseract.setDatapath("tessdata"); 
             tesseract.setLanguage("vie+eng"); // Đọc cả tiếng Việt và tiếng Anh
             return tesseract.doOCR(new File(imagePath));
